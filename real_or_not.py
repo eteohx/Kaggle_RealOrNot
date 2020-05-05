@@ -14,7 +14,7 @@ print('before: ' + train.text[15])
 # remove stopwords
 for i in stopwords.words('english'):
     train = train.replace(to_replace=r'\b%s\b\s'%i, value=" ",regex=True)
-    test = train.replace(to_replace=r'\b%s\b\s'%i, value=" ",regex=True)
+    test = test.replace(to_replace=r'\b%s\b\s'%i, value=" ",regex=True)
 print('after stopwords: ' + train.text[7])
 print('after stopwords: ' + train.text[8])
 print('after stopwords: ' + train.text[15])
