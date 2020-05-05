@@ -67,14 +67,14 @@ import numpy as np
 import re 
 nlp = spacy.load("en_core_web_md")
 
-train_feature = np.array([nlp(x.lower()).vector for x in train.text])
+train_feature = np.array([nlp(x).vector for x in train.text])
 # add keyword if available
 #train.keyword = train.keyword.apply(lambda x: x if pd.isnull(x) else ' '.join(re.findall("[a-zA-Z!]+", x)))
 #for i in range(len(train_feature)):
 #    if not pd.isnull(train.keyword[i]):
 #        train_feature[i] = (train_feature[i]+nlp(train.keyword[i].lower()).vector)/2   
 
-test_feature = np.array([nlp(x.lower()).vector for x in test.text])
+test_feature = np.array([nlp(x).vector for x in test.text])
 #test.keyword = test.keyword.apply(lambda x: x if pd.isnull(x) else ' '.join(re.findall("[a-zA-Z!]+", x)))
 #for i in range(len(test_feature)):
 #    if not pd.isnull(test.keyword[i]):
