@@ -1,6 +1,8 @@
 # Kaggle_RealOrNot Submission
 
-Words were represented as GloVe vectors and an SVM model was trained to classify whether a tweet represented a real disaster or not.
+* Pre-processed Twitter tweets
+* Represented words as GloVe vectors 
+* Train an SVM model was to predict whether a tweet represented a real disaster or not.
 
 
 ## Resources
